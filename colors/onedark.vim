@@ -272,6 +272,11 @@ call s:h("Question", { "fg": s:purple }) " hit-enter prompt and yes/no questions
 call s:h("QuickFixLine", { "fg": s:black, "bg": s:yellow }) " Current quickfix item in the quickfix window.
 call s:h("Search", { "fg": s:black, "bg": s:yellow }) " Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
 call s:h("SpecialKey", { "fg": s:special_grey }) " Meta and special keys listed with ":map", also for text used to show unprintable characters in the text, 'listchars'. Generally: text that is displayed differently from what it really is.
+" TODO: only color the underline
+" call s:h("SpellBad", { "gui": "underline", "sp": s:red, "cterm": "underline" }) " Word that is not recognized by the spellchecker. This will be combined with the highlighting used otherwise.
+" call s:h("SpellCap", { "gui": "underdouble", "sp": s:dark_yellow, "cterm": "underdouble" }) " Word that should start with a capital. This will be combined with the highlighting used otherwise.
+" call s:h("SpellLocal", { "gui": "underdotted", "sp": s:dark_yellow, "cterm": "underdotted" }) " Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
+" call s:h("SpellRare", { "gui": "underdashed", "sp": s:dark_yellow, "cterm": "underdashed" }) " Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
 call s:h("SpellBad", { "fg": s:red, "gui": "underline", "cterm": "underline" }) " Word that is not recognized by the spellchecker. This will be combined with the highlighting used otherwise.
 call s:h("SpellCap", { "fg": s:dark_yellow }) " Word that should start with a capital. This will be combined with the highlighting used otherwise.
 call s:h("SpellLocal", { "fg": s:dark_yellow }) " Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
@@ -441,11 +446,11 @@ call s:h("markdownCode", { "fg": s:green })
 call s:h("markdownCodeBlock", { "fg": s:green })
 call s:h("markdownCodeDelimiter", { "fg": s:green })
 call s:h("markdownH1", { "fg": s:red })
-call s:h("markdownH2", { "fg": s:red })
-call s:h("markdownH3", { "fg": s:red })
-call s:h("markdownH4", { "fg": s:red })
-call s:h("markdownH5", { "fg": s:red })
-call s:h("markdownH6", { "fg": s:red })
+call s:h("markdownH2", { "fg": s:green })
+call s:h("markdownH3", { "fg": s:blue })
+call s:h("markdownH4", { "fg": s:purple })
+call s:h("markdownH5", { "fg": s:cyan })
+call s:h("markdownH6", { "fg": s:white })
 call s:h("markdownHeadingDelimiter", { "fg": s:red })
 call s:h("markdownHeadingRule", { "fg": s:comment_grey })
 call s:h("markdownId", { "fg": s:purple })
@@ -458,6 +463,14 @@ call s:h("markdownListMarker", { "fg": s:red })
 call s:h("markdownOrderedListMarker", { "fg": s:red })
 call s:h("markdownRule", { "fg": s:comment_grey })
 call s:h("markdownUrl", { "fg": s:cyan, "gui": "underline", "cterm": "underline" })
+
+" Vimwiki (keep consistent with Markdown, above)
+" call s:h("VimwikiHeader1", { "fg": s:red })
+" call s:h("VimwikiHeader2", { "fg": s:green })
+" call s:h("VimwikiHeader3", { "fg": s:blue })
+" call s:h("VimwikiHeader4", { "fg": s:purple })
+" call s:h("VimwikiHeader5", { "fg": s:cyan })
+" call s:h("VimwikiHeader6", { "fg": s:white })
 
 " Perl
 call s:h("perlFiledescRead", { "fg": s:green })
